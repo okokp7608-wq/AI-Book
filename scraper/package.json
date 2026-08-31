@@ -1,0 +1,17 @@
+{
+  "name": "scraper",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "scrape": "node src/scrapeBoard.js",
+    "opendata": "node src/fetchOpenData.js",
+    "geocode": "node src/geocode.js",
+    "build:data": "node src/buildData.js",
+    "all": "npm run scrape && npm run opendata && npm run geocode && npm run build:data"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "iconv-lite": "^0.6.3"
+  }
+}

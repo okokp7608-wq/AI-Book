@@ -1,0 +1,16 @@
+{
+  "name": "gimpo-pay-map",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": ["scraper", "web"],
+  "scripts": {
+    "scrape": "npm run scrape -w scraper",
+    "opendata": "npm run opendata -w scraper",
+    "geocode": "npm run geocode -w scraper",
+    "build:data": "npm run build:data -w scraper",
+    "dev": "npm run dev -w web",
+    "build": "npm run build -w web",
+    "preview": "npm run preview -w web"
+  }
+}

@@ -1,0 +1,59 @@
+name: Refresh merchant data
+
+on:
+  schedule:
+    # 매주 월요일 03:00 KST (UTC 일요일 18:00)
+    - cron: '0 18 * * 0'
+  workflow_dispatch:
+    inputs:
+      full:
+        description: '전체 페이지 풀 스캔 (폐업 반영)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+
+      - name: 게시판 수집
+        env:
+          REQUEST_DELAY_MS: '500'
+        run: node scraper/src/scrapeBoard.js ${{ inputs.full && '--full' || '' }}
+
+      - name: 공개데이터 수집
+        env:
+          GG_API_KEY: ${{ secrets.GG_API_KEY }}
+        run: node scraper/src/fetchOpenData.js
+
+      - name: 신규 주소 지오코딩
+        env:
+          KAKAO_REST_KEY: ${{ secrets.KAKAO_REST_KEY }}
+          VWORLD_KEY: ${{ secrets.VWORLD_KEY }}
+          # 한 번의 실행에서 새로 호출할 상한 (쿼터 보호)
+          GEOCODE_LIMIT: '20000'
+        run: node scraper/src/geocode.js
+
+      - name: merchants.json 생성
+        run: node scraper/src/buildData.js
+
+      - name: 변경분 커밋
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scraper/data web/public/data/merchants.json
+          if git diff --cached --quiet; then
+            echo "변경 없음"
+          else
+            git commit -m "chore(data): 가맹점 데이터 갱신 $(date -u +%Y-%m-%d)"
+            git push
+          fi
