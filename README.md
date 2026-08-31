@@ -56,6 +56,74 @@ node scraper/src/buildData.js
 | `PAGE_UNIT`, `MAX_PAGES`, `REQUEST_DELAY_MS` | 수집 속도·범위 조절 | 선택 |
 | `GEOCODE_LIMIT` | 1회 실행당 신규 지오코딩 상한 | 선택 |
 
+### 키 발급 방법
+
+#### 1. 카카오 키 — `VITE_KAKAO_JS_KEY`, `KAKAO_REST_KEY` (필수)
+
+앱 하나를 만들면 JavaScript 키와 REST API 키가 함께 나옵니다. 둘 다 씁니다.
+
+1. [developers.kakao.com](https://developers.kakao.com) 접속 → 카카오 계정으로 로그인
+2. 상단 **내 애플리케이션 → 애플리케이션 추가하기** → 앱 이름·사업자명 입력 후 저장
+3. 생성된 앱 → **앱 키** 메뉴에 4종(네이티브 / REST API / JavaScript / Admin)이 표시됨
+   - **JavaScript 키** → `VITE_KAKAO_JS_KEY` (웹앱 지도)
+   - **REST API 키** → `KAKAO_REST_KEY` (주소 → 좌표 변환)
+   - Admin 키는 이 프로젝트에서 쓰지 않습니다. 절대 어디에도 넣지 마세요.
+4. **앱 설정 → 플랫폼 → Web 플랫폼 등록**에서 사이트 도메인을 추가합니다. 등록하지 않은
+   도메인에서는 지도가 뜨지 않습니다.
+   - `http://localhost:5173` (로컬 개발)
+   - `https://<GitHub 사용자명>.github.io` (Pages 배포)
+
+주소 검색(Local API)은 별도 신청 없이 REST 키로 바로 호출됩니다. 무료 호출 한도는
+개발자센터 문서의 쿼터 안내에서 확인하세요.
+
+#### 2. 경기데이터드림 키 — `GG_API_KEY` (권장)
+
+지역화폐 가맹점 현황 데이터에 위경도가 들어 있어 지오코딩 호출을 크게 줄여 줍니다.
+
+1. [data.gg.go.kr](https://data.gg.go.kr) 회원가입 후 로그인
+2. **오픈API** 메뉴에서 「지역화폐 가맹점 현황」 검색 → 상세 페이지에서 **활용신청**
+3. **마이페이지 → 인증키**에서 발급된 키를 복사 (계정당 1개, 대부분 즉시 발급)
+
+공공데이터포털을 쓸 수도 있습니다. [data.go.kr](https://www.data.go.kr)에서
+「경기도_지역화폐 가맹점 현황」 또는 「전국지역화폐가맹점표준데이터」를 활용신청한 뒤
+**마이페이지 → 오픈API → 인증키**의 일반 인증키를 사용하면 됩니다. 이때는
+`scraper/src/config.js`의 `OPENDATA.endpoint`와 응답 필드명을 그쪽 규격에 맞춰야 합니다.
+
+#### 3. VWorld 키 — `VWORLD_KEY` (선택)
+
+카카오 지오코딩이 실패한 주소를 한 번 더 시도하는 2순위 경로입니다.
+
+1. [vworld.kr](https://www.vworld.kr) 회원가입 후 로그인
+2. **오픈API → 인증키 발급**에서 지오코더 API를 선택
+3. 활용 URL(도메인)을 반드시 입력해야 발급됩니다. 서버에서만 쓸 경우
+   `http://localhost` 등으로 등록해도 동작합니다.
+
+### 키 넣는 위치
+
+로컬 개발:
+
+```bash
+cp web/.env.example web/.env      # VITE_KAKAO_JS_KEY 입력
+export KAKAO_REST_KEY=...         # 스크래퍼용 (셸 환경변수)
+export GG_API_KEY=...
+```
+
+GitHub Actions: 저장소 **Settings → Secrets and variables → Actions → New repository secret**
+에서 아래 이름으로 등록합니다. 워크플로가 이 이름을 그대로 참조합니다.
+
+| Secret 이름 | 값 |
+|---|---|
+| `KAKAO_JS_KEY` | 카카오 JavaScript 키 |
+| `KAKAO_REST_KEY` | 카카오 REST API 키 |
+| `GG_API_KEY` | 경기데이터드림 인증키 |
+| `VWORLD_KEY` | VWorld 인증키 (선택) |
+
+배포는 **Settings → Pages → Source**를 `GitHub Actions`로 바꿔 두어야 동작합니다.
+
+> JavaScript 키는 브라우저에 그대로 노출되는 것이 정상입니다. 도메인 등록으로 보호되므로
+> `.env`에 넣고 빌드해도 됩니다. 반면 **REST 키와 인증키는 서버·CI에서만** 쓰고 프론트엔드
+> 코드나 커밋에 넣지 마세요.
+
 ## 구조
 
 ```
