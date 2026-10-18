@@ -1,50 +1,18 @@
 {
-  "scrapedAt": "2026-10-11T21:41:06.721Z",
+  "scrapedAt": "2026-10-18T20:21:24.129Z",
   "mode": "incremental",
   "count": 30035,
   "merchants": [
     {
       "id": "p1-r0",
-      "name": "세븐일레븐등기소점",
-      "category": "기타유통",
-      "address": "경기도 김포시 봉화로 24",
-      "sourceUrl": "https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283&pageIndex=1&pageUnit=100&searchCnd=all&searchKrwd=#n",
-      "source": "board"
-    },
-    {
-      "id": "p1-r1",
-      "name": "이레학원",
-      "category": "문리계학원",
-      "address": "경기도 김포시 양도로 46",
-      "sourceUrl": "https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283&pageIndex=1&pageUnit=100&searchCnd=all&searchKrwd=#n",
-      "source": "board"
-    },
-    {
-      "id": "p1-r2",
-      "name": "꽃부르다",
+      "name": "부르다,꽃 Call me Flower",
       "category": "화원",
       "address": "경기도 김포시 풍무2로 43 (풍무동)",
       "sourceUrl": "https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283&pageIndex=1&pageUnit=100&searchCnd=all&searchKrwd=#n",
       "source": "board"
     },
     {
-      "id": "p1-r3",
-      "name": "플라워플레이스",
-      "category": "화원",
-      "address": "경기도 김포시 고촌읍 장차로13번길 18",
-      "sourceUrl": "https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283&pageIndex=1&pageUnit=100&searchCnd=all&searchKrwd=#n",
-      "source": "board"
-    },
-    {
-      "id": "p1-r4",
-      "name": "온그린골프김포구래점",
-      "category": "골프연습장",
-      "address": "경기도 김포시 김포한강5로 321 (구래동)",
-      "sourceUrl": "https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283&pageIndex=1&pageUnit=100&searchCnd=all&searchKrwd=#n",
-      "source": "board"
-    },
-    {
-      "id": "p1-r5",
+      "id": "p1-r1",
       "name": "세븐일레븐 김포디원시티점",
       "category": "편의점",
       "address": "경기도 김포시 김포한강10로133번길 127 (구래동)",
@@ -52,114 +20,146 @@
       "source": "board"
     },
     {
-      "id": "p1-r6",
-      "name": "낭만치맥",
+      "id": "p1-r2",
+      "name": "다봄이비인후과의원",
+      "category": "일반·치과·한의원",
+      "address": "경기도 김포시 김포한강11로 288-27(운양동)",
+      "sourceUrl": "https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283&pageIndex=1&pageUnit=100&searchCnd=all&searchKrwd=#n",
+      "source": "board"
+    },
+    {
+      "id": "p1-r3",
+      "name": "프랜시스파커",
+      "category": "서점",
+      "address": "경기도 김포시 김포한강1로 250(운양동)",
+      "sourceUrl": "https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283&pageIndex=1&pageUnit=100&searchCnd=all&searchKrwd=#n",
+      "source": "board"
+    },
+    {
+      "id": "p1-r4",
+      "name": "우리동네",
+      "category": "기타 신변잡화",
+      "address": "경기도 김포시 통진읍 김포대로2230번길 21-10",
+      "sourceUrl": "https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283&pageIndex=1&pageUnit=100&searchCnd=all&searchKrwd=#n",
+      "source": "board"
+    },
+    {
+      "id": "p1-r5",
+      "name": "양촌버섯샤브칼국수",
       "category": "한식",
-      "address": "경기도 김포시 김포한강9로12번길 7-17",
+      "address": "경기도 김포시 양촌읍 석모로73번길 87",
+      "sourceUrl": "https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283&pageIndex=1&pageUnit=100&searchCnd=all&searchKrwd=#n",
+      "source": "board"
+    },
+    {
+      "id": "p1-r6",
+      "name": "하성피복",
+      "category": "기성복점",
+      "address": "경기도 김포시 하성면 월하로 681",
       "sourceUrl": "https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283&pageIndex=1&pageUnit=100&searchCnd=all&searchKrwd=#n",
       "source": "board"
     },
     {
       "id": "p1-r7",
-      "name": "영재문구",
-      "category": "문방구점",
-      "address": "경기도 김포시 전원로 32",
+      "name": "번양집(고촌점)",
+      "category": "한식",
+      "address": "경기도 김포시 고촌읍 수기로 109",
       "sourceUrl": "https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283&pageIndex=1&pageUnit=100&searchCnd=all&searchKrwd=#n",
       "source": "board"
     },
     {
       "id": "p1-r8",
-      "name": "킹콩부대찌개김포장기점",
-      "category": "한식",
-      "address": "경기도 김포시 김포한강1로97번길 10-25",
+      "name": "수서나",
+      "category": "양식",
+      "address": "경기도 김포시 통진읍 율마로438번길 51",
       "sourceUrl": "https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283&pageIndex=1&pageUnit=100&searchCnd=all&searchKrwd=#n",
       "source": "board"
     },
     {
       "id": "p1-r9",
-      "name": "와이유필라테스",
-      "category": "종합스포츠센터",
-      "address": "경기도 김포시 태장로 808",
+      "name": "케이피(KP)종합상사",
+      "category": "기계류 건축설비",
+      "address": "경기도 김포시 통진읍 김포대로 2323",
       "sourceUrl": "https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283&pageIndex=1&pageUnit=100&searchCnd=all&searchKrwd=#n",
       "source": "board"
     },
     {
       "id": "p2-r0",
-      "name": "무진장수산활어회센터2호점",
-      "category": "한식",
-      "address": "경기도 김포시 대곶면 대명항1로 60",
+      "name": "레노마홈 김포신도시점",
+      "category": "침구,커튼,카펫트점",
+      "address": "경기도 김포시 양촌읍 석모로 11",
       "sourceUrl": "https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283&pageIndex=2&pageUnit=10&searchCnd=all&searchKrwd=#n",
       "source": "board"
     },
     {
       "id": "p2-r1",
-      "name": "브이엑스",
-      "category": "골프연습장",
-      "address": "경기도 김포시 김포한강1로 250",
+      "name": "김종구식맛치킨 옛날통닭",
+      "category": "패스트푸드점",
+      "address": "경기도 김포시 사우중로 45(사우동)",
       "sourceUrl": "https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283&pageIndex=2&pageUnit=10&searchCnd=all&searchKrwd=#n",
       "source": "board"
     },
     {
       "id": "p2-r2",
-      "name": "케이짐(K-GYM) 휘트니스",
-      "category": "종합스포츠센터",
-      "address": "경기 김포시 김포한강9로 73",
+      "name": "유림농산물",
+      "category": "농．수．축산물점",
+      "address": "경기도 김포시 김포한강2로23번길 42",
       "sourceUrl": "https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283&pageIndex=2&pageUnit=10&searchCnd=all&searchKrwd=#n",
       "source": "board"
     },
     {
       "id": "p2-r3",
-      "name": "톡톡잉글리쉬영어교습소",
-      "category": "외국어학원",
-      "address": "경기도 김포시 김포한강2로 103 (장기동",
+      "name": "미래네 네일",
+      "category": "피부미용원",
+      "address": "경기도 김포시 김포한강11로 312",
       "sourceUrl": "https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283&pageIndex=2&pageUnit=10&searchCnd=all&searchKrwd=#n",
       "source": "board"
     },
     {
       "id": "p2-r4",
-      "name": "풀앤베베",
-      "category": "부동산 중개업",
-      "address": "경기도 김포시 김포한강2로24번길 134-33 (장기동)",
+      "name": "GS25 김포마산원룸점",
+      "category": "편의점",
+      "address": "경기 김포시 김포한강8로148번길",
       "sourceUrl": "https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283&pageIndex=2&pageUnit=10&searchCnd=all&searchKrwd=#n",
       "source": "board"
     },
     {
       "id": "p2-r5",
-      "name": "꽃같은오늘",
-      "category": "전자상거래",
-      "address": "경기도 김포시 봉화로182번길 33 (북변동",
+      "name": "달콤한 집",
+      "category": "농．수．축산물점",
+      "address": "경기도 김포시 김포한강9로 116(구래동",
       "sourceUrl": "https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283&pageIndex=2&pageUnit=10&searchCnd=all&searchKrwd=#n",
       "source": "board"
     },
     {
       "id": "p2-r6",
-      "name": "미래아이 Fun잉글리쉬&영어도서관",
-      "category": "서점",
-      "address": "경기도 김포시 김포한강4로 131 (장기동)",
+      "name": "옆집돼지318",
+      "category": "한식",
+      "address": "경기도 김포시 태장로 810",
       "sourceUrl": "https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283&pageIndex=2&pageUnit=10&searchCnd=all&searchKrwd=#n",
       "source": "board"
     },
     {
       "id": "p2-r7",
-      "name": "은자매잡화점",
-      "category": "민예·공예·토산품",
-      "address": "경기도 김포시 김포한강10로133번길 40 (구래동)",
+      "name": "미도리네일",
+      "category": "피부미용원",
+      "address": "경기도 김포시 김포한강1로 240",
       "sourceUrl": "https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283&pageIndex=2&pageUnit=10&searchCnd=all&searchKrwd=#n",
       "source": "board"
     },
     {
       "id": "p2-r8",
-      "name": "바다포차 회and조개구이",
-      "category": "한식",
-      "address": "경기도 김포시 고촌읍 상미1로 2",
+      "name": "연세화이트치과",
+      "category": "일반·치과·한의원",
+      "address": "경기도 김포시 중봉로 1-1",
       "sourceUrl": "https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283&pageIndex=2&pageUnit=10&searchCnd=all&searchKrwd=#n",
       "source": "board"
     },
     {
       "id": "p2-r9",
-      "name": "동일수공인중개사사무소",
-      "category": "부동산 중개업",
-      "address": "경기도 김포시 김포한강8로 173-88 (마산동",
+      "name": "정수산장",
+      "category": "한식",
+      "address": "경기도 김포시 고촌읍 풍곡로 41",
       "sourceUrl": "https://www.gimpo.go.kr/portal/selectBbsNttList.do?bbsNo=573&key=1283&pageIndex=2&pageUnit=10&searchCnd=all&searchKrwd=#n",
       "source": "board"
     },
